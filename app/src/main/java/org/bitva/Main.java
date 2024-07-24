@@ -3,9 +3,9 @@ package org.bitva;
 public class Main {
     public static void main(String[] args) {
        logotip logo = new logotip();
-       select igra = new select();
 
+        Gameplay game = new Gameplay();
        logo.logo();
-       igra.vibor();
+       game.Start();
     }
 }
