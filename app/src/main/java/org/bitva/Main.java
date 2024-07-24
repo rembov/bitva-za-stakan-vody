@@ -1,3 +1,5 @@
+package org.bitva;
+
 public class Main {
     public static void main(String[] args) {
        logotip logo = new logotip();
@@ -5,6 +7,5 @@ public class Main {
 
        logo.logo();
        igra.vibor();
-
     }
 }
