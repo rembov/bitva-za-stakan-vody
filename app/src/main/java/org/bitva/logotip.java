@@ -1,3 +1,5 @@
+package org.bitva;
+
 public class logotip {
     public void logo() {
 
@@ -10,7 +12,7 @@ public class logotip {
         System.out.println("|                                |");
         System.out.println("|--------------------------------|");
         try {
-            Thread.sleep(5000); // Задержка в 1 секунду
+            Thread.sleep(1000); // Задержка в 1 секунду
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
