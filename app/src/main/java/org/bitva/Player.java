@@ -40,20 +40,16 @@ public class Player {
         String name = new String();
         System.out.println("Введи своё имя");
 
-        while (true) {
-            if (!inp.hasNextLine()) {
-                System.out.println("Введи своё имя");
-                if (inp.hasNext()) {
-                    inp.next();
+        while (inp.hasNext()) {
+            if (inp.hasNextLine()) {
+                name = inp.nextLine();
+                if (name.length() < 2) {
+                    System.out.println("Введи своё имя");
                 } else {
-                    return "Игрок";
+                    break;
                 }
             } else {
-                name = inp.nextLine();
-                if (name.isEmpty()) {
-                    name = "Игрок";
-                }
-                break;
+                inp.next();
             }
         }
         return name;
