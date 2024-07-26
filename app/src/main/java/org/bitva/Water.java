@@ -1,5 +1,6 @@
 package org.bitva;
 
+import java.sql.SQLException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -17,7 +18,7 @@ public class Water {
         randY = rng.nextInt(101);
     }
 
-    public void Start(Player p) {
+    public void Start(Player p) throws SQLException {
         System.out.println("""
                 Сейчас мы сыграем в игру...
                 
@@ -32,6 +33,8 @@ public class Water {
         );
         System.out.println("Ты сделал " + this.tries + " попыток.");
         System.out.println("Ты заработал " + p.GetScore() + " очков.");
+        Database db = new Database();
+        db.AddRecord(p.GetName(), p.GetScore());
     }
 
     private void GuessX(Player p) {

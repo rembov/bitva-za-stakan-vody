@@ -1,11 +1,12 @@
 package org.bitva;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Gameplay {
     private int gameMode = 0;
     private int battleMode = 0;
-    public void Start() {
+    public void Start() throws SQLException {
         Scanner inp = new Scanner(System.in);
         Player gaymer = new Player();
         System.out.println("Твой ник " + gaymer.GetName() + "\n");
@@ -41,7 +42,7 @@ public class Gameplay {
         return captured;
     }
 
-    private void BattleModeCheck(Player p, Scanner inp) {
+    private void BattleModeCheck(Player p, Scanner inp) throws SQLException {
         System.out.println("""
                 |----------------------------------------------------|
                 |----------------------------------------------------|
@@ -84,7 +85,7 @@ public class Gameplay {
                 break;
             case 3:
                 Database db = new Database();
-                db.ShowPlayers();
+                db.ShowRecords();
                 break;
             default:
                 System.exit(0);
