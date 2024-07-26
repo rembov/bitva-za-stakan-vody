@@ -51,3 +51,6 @@ tasks.withType(JavaCompile) {
 //     // Use JUnit Platform for unit tests.
 //     useJUnitPlatform()
 // }
+task wrapper(type:Wrapper){
+        gradleVersion = '8.8'
+    }

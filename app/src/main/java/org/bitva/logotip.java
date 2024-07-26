@@ -5,10 +5,10 @@ public class logotip {
 
         System.out.println("|--------------------------------|");
         System.out.println("|                                |");
-        System.out.println("|              БИТВА             |");
-        System.out.println("|               ЗА               |");
+        System.out.println("|         БИТВА                  |");
+        System.out.println("|             ЗА                 |");
         System.out.println("|              СТАКАН            |");
-        System.out.println("|              ВОДЫ              |");
+        System.out.println("|                  ВОДЫ          |");
         System.out.println("|                                |");
         System.out.println("|--------------------------------|");
         try {
