@@ -9,6 +9,7 @@ public class Water {
     private int tries = 0;
     private boolean xSolved = false;
     private boolean ySolved = false;
+    private int baseScore = 1000;
 
     public Water() {
         Random rng = new Random();
@@ -26,7 +27,11 @@ public class Water {
                 
                 Удачи.""");
         GuessX(p);
+        p.SetScore(
+                (int) Math.floor((double) this.baseScore / (this.tries * ((double) this.tries / 12)))
+        );
         System.out.println("Ты сделал " + this.tries + " попыток.");
+        System.out.println("Ты заработал " + p.GetScore() + " очков.");
     }
 
     private void GuessX(Player p) {
