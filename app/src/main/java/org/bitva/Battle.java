@@ -99,11 +99,11 @@ public class Battle {
             if (inp.hasNextInt()) {
                 pWinner = inp.nextInt();
                 if (pWinner < 1) {
-                    System.out.print("Дебилоид, нормалььное число введи: ");
+                    System.out.print("Дебилоид, нормальное число введи: ");
                     continue;
                 }
                 if (pWinner > this.negrCount) {
-                    System.out.print("С дубу рухнул? Ты негров меньше, чем ты до этого указал.\nВводи нормально: ");
+                    System.out.print("С дубу рухнул? Ты негров меньше указал, чем до этого.\nВводи нормально: ");
                     continue;
                 }
                 return pWinner;
