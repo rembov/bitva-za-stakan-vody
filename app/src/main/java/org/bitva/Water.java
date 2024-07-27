@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Water {
     private int randX;
     private int randY;
-    private int tries = 0;
+    private int tries = 1;
     private boolean xSolved = false;
     private boolean ySolved = false;
     private int baseScore = 1000;
@@ -29,7 +29,7 @@ public class Water {
                 Удачи.""");
         GuessX(p);
         p.SetScore(
-                (int) Math.floor((double) this.baseScore / (this.tries * ((double) this.tries / 12)))
+                this.baseScore - (this.tries - 1) * 50
         );
         System.out.println("Ты сделал " + this.tries + " попыток.");
         System.out.println("Ты заработал " + p.GetScore() + " очков.");
