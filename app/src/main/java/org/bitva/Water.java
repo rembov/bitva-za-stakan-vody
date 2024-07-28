@@ -29,7 +29,7 @@ public class Water {
                 Удачи.""");
         GuessX(p);
         p.SetScore(
-                this.baseScore - (this.tries - 1) * 50
+                Math.max(0, this.baseScore - (this.tries - 1) * 50)
         );
         System.out.println("Ты сделал " + this.tries + " попыток.");
         System.out.println("Ты заработал " + p.GetScore() + " очков.");
