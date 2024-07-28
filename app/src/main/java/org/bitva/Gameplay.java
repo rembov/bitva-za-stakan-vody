@@ -61,23 +61,8 @@ public class Gameplay {
 
         switch (this.battleMode) {
             case 1:
-                int count = 0;
-                bitva battle = new bitva();
-                while (true) {
-                    System.out.print("Введи количество негров для битвы: ");
-                    count = captureInt(inp);
-                    if (count < 0) {
-                        System.out.println("Ты дебил? Негров не может быть в отрицательном количестве.");
-                    }
-                    if (count == 0) {
-                        System.out.println("Приятно было сыграть.");
-                        break;
-                    }
-                    if (count == 1) {
-                        System.out.println("Ты дебил? Один негр всегда побеждает нуль врагов.");
-                    }
-                    battle.bit(count);
-                }
+                Battle battle = new Battle();
+                battle.Start(p);
                 break;
             case 2:
                 Water wt = new Water();
@@ -85,7 +70,7 @@ public class Gameplay {
                 break;
             case 3:
                 Database db = new Database();
-                db.ShowRecords();
+                db.ShowMenu();
                 break;
             default:
                 System.exit(0);
