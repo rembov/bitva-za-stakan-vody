@@ -34,7 +34,7 @@ public class Water {
         System.out.println("Ты сделал " + this.tries + " попыток.");
         System.out.println("Ты заработал " + p.GetScore() + " очков.");
         Database db = new Database();
-        db.AddRecord(p.GetName(), p.GetScore());
+        db.AddRecordWater(p.GetName(), p.GetScore());
     }
 
     private void GuessX(Player p) {

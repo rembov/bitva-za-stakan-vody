@@ -70,7 +70,7 @@ public class Gameplay {
                 break;
             case 3:
                 Database db = new Database();
-                db.ShowRecords();
+                db.ShowMenu();
                 break;
             default:
                 System.exit(0);

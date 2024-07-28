@@ -1,6 +1,7 @@
 package org.bitva;
 
 import java.nio.charset.StandardCharsets;
+import java.sql.SQLException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -14,7 +15,7 @@ public class Battle {
         this.preWinner = CapturePreWinner();
     }
 
-    public void Start(Player p) {
+    public void Start(Player p) throws SQLException {
         Random rng = new Random();
         int scores;
         int winner = rng.nextInt(this.negrCount + 1);
@@ -56,6 +57,9 @@ public class Battle {
 
         System.out.println("Победил негр под номером " + winner);
         System.out.println("Ты заработал " + scores + " очков");
+        p.SetScore(scores);
+        Database db = new Database();
+        db.AddRecordBattle(p, this.negrCount);
     }
 
     private int CaptureCount() {
