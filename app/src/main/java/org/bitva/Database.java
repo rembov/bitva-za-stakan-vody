@@ -42,7 +42,9 @@ public class Database {
             }
             ResultSet res = st.executeQuery("SELECT NAME,SCORE FROM WATER_PLAYERS ORDER BY SCORE DESC LIMIT 10");
             while (countRes.next()) {
-                System.out.println(res.getString("NAME") + " " + res.getInt("SCORE"));
+                System.out.println("ИМЯ: " + res.getString("NAME"));
+                System.out.println("ОЧКИ: " + res.getInt("SCORE"));
+                System.out.print("\n");
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
