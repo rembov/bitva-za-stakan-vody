@@ -17,43 +17,6 @@ public class Database {
         }
     }
 
-    public void ShowMenu() {
-        Scanner inp = new Scanner(System.in);
-        int uinp;
-        System.out.println("""
-                |----------------------------------------------------|
-                |----------------------------------------------------|
-                |                  ТАБЛИЦА ИГРОКОВ                   |
-                |                                                    |
-                | 1. Режим битвы                                     |
-                | 2. Поиск воды                                      |
-                |                                                    |
-                |----------------------------------------------------|
-                |----------------------------------------------------|""");
-        System.out.print("Выбери пункт: ");
-
-        while (inp.hasNext()) {
-            if (inp.hasNextInt()) {
-                uinp = inp.nextInt();
-                switch (uinp) {
-                    case 1:
-                        ShowRecordsBattle();
-                        break;
-                    case 2:
-                        ShowRecordsWater();
-                        break;
-                    default:
-                        System.out.print("Нету такого пункта. Введи заново: ");
-                        continue;
-                }
-                break;
-            } else {
-                System.out.print("Что это такое? Вводи нормально: ");
-                inp.next();
-            }
-        }
-    }
-
     public void AddRecordWater(String name, int score) {
         try (
                 Connection con = DriverManager.getConnection("jdbc:sqlite:./gamedata.db");

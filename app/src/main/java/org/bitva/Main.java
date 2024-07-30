@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) throws SQLException {
        logotip logo = new logotip();
 
-        Gameplay game = new Gameplay();
+       Menu game = new Menu();
        logo.logo();
        game.Start();
     }
