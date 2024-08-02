@@ -1,7 +1,6 @@
 package org.bitva;
 
 import java.sql.*;
-import java.util.Scanner;
 
 public class Database {
     public Database() throws SQLException {
